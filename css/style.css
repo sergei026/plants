@@ -88,15 +88,16 @@ body {
     font-size: 16px;
     line-height: 50px;
     margin-right: 4px;
+    min-width: 452px;
 }
 
 .nav-item {
     margin: 0;
-    margin-left: 46px;
 }
 .nav-item:hover {
     font-weight: 700;
     color: #E06733;
+    transition: 0.4s;
 }
 
 .main {
@@ -114,17 +115,17 @@ body {
 }
 
 .welcome-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 62px;
     padding-bottom: 62px;
     max-width: 1222px;
-    max-height: 532px;
+    min-height: 532px;
+    
 }
 
-.welcome-content {
-    margin-left: 224px;
+.welcome-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .welcome-headline {
@@ -132,7 +133,7 @@ body {
     font-size: 45px;
     line-height: 50px;
     color: #717171;
-    width: 549px;
+    max-width: 549px;
     height: 101px;
     margin-bottom: 42px;
 }
@@ -147,6 +148,11 @@ body {
     line-height: 35px;
     margin-bottom: 48px;
     max-width: 525px;
+}
+
+.welcome-img {
+    max-height: 408px;
+    max-width: 448px;
 }
 
 .welcome-button {
@@ -164,14 +170,14 @@ body {
     background-color: #E06733;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
 }
 
 .about-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-height: 
-    666px;
+    
     max-width: 1222px;
     margin-top: 93px;
     margin-bottom: 94px;
@@ -179,7 +185,7 @@ body {
 
 .about-content {
     max-width: 605px;
-    max-height: 350px;
+    min-height: 350px;
 }
 
 .about-headline {
@@ -191,6 +197,7 @@ body {
     margin-bottom: 40px;
     max-width: 
     463px;
+    max-height: 102px;
 }
 
 .about-headline-highlight {
@@ -199,6 +206,10 @@ body {
 
 .about-img {
     max-height: 479px;
+}
+
+.about-text {
+    font-weight:400;
 }
 
 .service {
@@ -213,14 +224,16 @@ body {
 .service-content {
     display: flex;
     align-items: flex-end;
-    max-height: 73px;
+    min-height: 73px;
 }
 
 .button-list {
     display: flex;
     justify-content: space-between;
     margin-left: 142px;
-    max-height: 50px;
+    min-height: 50px;
+    min-width: 559px;
+    flex-wrap: wrap;
 }
 
 .service-headline {
@@ -229,7 +242,7 @@ body {
     font-family: 'Inika', serif;
     color: #499A18;
     max-width: 306px;
-    max-height: 79px;
+    min-height: 79px;
 }
 
 .service-button {
@@ -240,7 +253,7 @@ body {
     padding: 12px 40px;
     border: 1px solid #E06733;
     border-radius: 5px;
-    margin-right: 38px;
+    /* margin-right: 38px; */
     cursor: pointer;
     min-width: 161px;
 }
@@ -249,6 +262,7 @@ body {
     color: #FFFFFF;
     background-color: #E06733;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
 }
 
 .service-cards {
@@ -256,7 +270,7 @@ body {
     justify-content: space-between;
     align-content: space-between;
     flex-wrap: wrap;
-    height: 955px;
+    min-height: 955px;
     margin-top: 105px;
     margin-bottom: 121px;
 }
@@ -264,6 +278,16 @@ body {
 .service-item {
     display: flex;
     flex-direction: column;
+}
+
+.service-image {
+    width: 330px;
+    height: 350px;
+}
+
+.item-img {
+    object-fit:cover;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .item-content {
@@ -295,7 +319,8 @@ body {
 .price-section {
     display: flex;
     justify-content: space-between;
-    height: 560px;
+    flex-wrap: wrap;
+    min-height: 560px;
     max-width: 1222px;
     padding: 40px 0 115px;
 }
@@ -337,6 +362,7 @@ body {
     background-color:#499A18;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
 }
 
 .rate-description {
@@ -354,6 +380,9 @@ body {
 
 .contact-box {
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .contact-box-headline {
@@ -387,13 +416,12 @@ body {
     background-color: #E06733;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
 }
 
 .contact-box-img {
     width: 152px;
     height: 175px;
-    margin-left: 300px;
-    
 }
 
 .contact {
@@ -405,9 +433,14 @@ body {
 
 .contact-section {
     max-width: 1222px;
+    
+}
+
+.contacts-wrpapper {
     display: flex;
     justify-content: space-between;
     margin-top: 53px;
+    width: 100%;
 }
 
 .contact-headline {
@@ -421,20 +454,22 @@ body {
 .contacts-img {
     max-height: 497px;
 }
+
 .contact-content {
     display: flex;
     justify-content: space-between;
     height: 138px;
-    min-width: 709px;
+    width: 709px;
     margin-top: 3px;
 }
 
 .contact-form {
     align-self: flex-end;
+    width: 63%;
 }
 
 .city-select {
-    width: 450px;
+    width: 100%;
     height: 50px;
     display: flex;
     background-color: #D6E7D2;
@@ -462,6 +497,7 @@ body {
   height: 16px;
   background-image: url(../assets/icons/Ellipse-2.svg);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footer {
@@ -487,12 +523,25 @@ body {
 .github {
     display: flex;
     justify-content: space-between;
-    width: 182px;
+    width: 168px;
 }
 
 .gh-footer {
     display: block;
-    margin-right: 20px;
+}
+
+.gh-footer-link:hover {
+    transition: 0.4s;
+    color:#E06733;
+}
+
+.rss {
+    padding-left: 18px;
+}
+
+.rss:hover {
+    color: #E06733;
+    transition: 0.4s;
 }
 
 .social-links {
@@ -507,4 +556,585 @@ body {
 
 .footer-icon {
     max-height: 38px;
+}
+
+.header-burger {
+    width: 40px;
+    height: 24px;
+    border: none;
+    position: relative;
+    display: none;
+}
+
+.burger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #717171;
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.burger-line:nth-child(1) {
+    top: 0;
+}
+
+.burger-line:nth-child(2) {
+    top: 8px;
+}
+
+.burger-line:nth-child(3) {
+    top: 16px;
+}
+
+.burger-line:nth-child(4) {
+    top: 24px;
+}
+
+@media (max-width: 940px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .welcome-section,
+    .header-content,
+    .about-section,
+    .service-section,
+    .price-section,
+    .contact-section,
+    .footer-content {
+        max-width: 668px;
+    }
+
+    .header {
+        min-height: 117px;
+    }
+    .header-content {
+        min-height: 117px;
+    }
+
+    .nav-menu {
+        margin: 0;
+    }
+
+    
+    .welcome-headline {
+        font-size: 35px;
+        max-width: 341px;
+        margin-bottom: 30px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+        line-height: 25px;
+        width: 341px;
+        min-height: 105px;
+        margin-bottom: 30px;
+        margin-left: 5px;
+    }
+
+    .welcome-wrapper {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    .welcome-img {
+        max-width: 280px;
+        max-height: 254px;
+    }
+
+    .welcome-section {
+        padding: 40px 0 70px;
+        min-height: 420px;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-headline {
+        text-align: center;
+        font-size: 35px;
+        line-height: 45.6px;
+        align-self: center;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        max-height: 102px;
+    }
+
+    .about-section {
+        min-height: 783px;
+        margin: 0 auto 0;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 668px;
+        min-height: 350px;
+    }
+
+    .about-text {
+        min-height: 208px;
+    }
+
+    .about-img {
+        max-height: 258px;
+        max-width: 250px;
+        margin-bottom: 95px;
+    }
+
+    .service-content {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 60px;
+    }
+
+    .service-section {
+        margin: 0 auto;
+        min-height: 1780px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .button-list {
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+
+    .service-headline {
+        min-height: 94px;
+        font-size: 35px;
+        line-height: 45.6px;
+        margin-bottom: 40px;
+    }
+    
+    .service-cards {
+        margin: 0 0 70px;
+        min-height: 1426px;
+    }
+
+    .service-item {
+        min-height: 450px;
+        min-width: 281px;
+    }
+
+    .service-image {
+        width: 280px;
+        height: 350px;
+    }
+
+    .item-content {
+        padding: 0 38px 20px;
+    }
+
+    .service-item-headline {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .item-content {
+        max-width: 280px;
+    }
+
+    .price-section {
+        padding: 0;
+        flex-wrap:nowrap;
+        min-height: 585px;
+    }
+
+    .contact-box {
+        margin-top: 139px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .rates-box {
+        margin-top: 57px;
+    }
+
+    .price-headline {
+        font-size: 35px;
+        line-height: 42px;
+        margin-left: 15px
+    }
+
+    .contact-box-headline {
+        font-size: 25px;
+        line-height: 35px;
+        max-width: 296px;
+    }
+
+    .prices-box {
+        margin-top: 40px;
+    }
+
+    .contact {
+        min-height: 739px;
+    }
+
+    .contact-section {
+        min-height: 100%;
+    }
+
+    .contacts-wrpapper {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin: 0;
+        min-height: 739px;
+    }
+
+    .contacts-img {
+        max-width: 200px;
+        max-height: 248.5px;
+        align-self: center;
+        margin-left: 20px;
+    }
+
+    .contact-content {
+        margin-top: 40px;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        min-height: 201px;
+    }
+
+    .contact-headline {
+       align-items: center;
+    }
+
+    .contact-form {
+        align-self: center;
+        width: 68%;
+    }
+
+    .contact-btn {
+        margin: 28px auto 33px;
+    }
+
+    .footer-content {
+        min-height: 181px;
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .github {
+        margin-top: 32px;
+    }
+
+    .social-links {
+        margin-bottom: 17px;
+    }
+
+    .rss {
+        padding: 0;
+    }
+
+}
+
+
+
+@media (max-width: 583px) {
+    .header {
+        min-height: 96px;
+    }
+
+    .header-content {
+        min-height: 96px;
+    }
+
+    .nav {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #EDF2EC;
+        z-index: 10;
+        padding: 70px;
+        transform: translateY(-100%);
+        transition: .3s ease;
+    }
+
+    .nav-open {
+        transform: translateY(0);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        font-size: 40px;
+        line-height: 50px;
+        
+    }
+
+    .nav-item {
+        margin-bottom: 40px;
+    }
+
+    .nav-item::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../assets/icons/plants-logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+
+    .nav-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .header-burger {
+        display: block;
+        z-index: 11;
+        cursor: pointer;
+    }
+
+        .nav-close .burger-line:nth-child(1) {
+        transform: scale(0);
+    }
+    
+    .nav-close .burger-line:nth-child(2) {
+        transform: translateY(4px) rotate(45deg) ;
+    }
+    
+    .nav-close .burger-line:nth-child(3) {
+        transform: translateY(-4px) rotate(-45deg);
+    }
+    
+    .nav-close .burger-line:nth-child(4) {
+        transform: scale(0);
+    }
+
+    .container {
+        margin: 0 25px;
+    }
+
+    .welcome-section {
+        min-height: 300px;
+        padding: 24px 0 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-content {
+        max-width: 100%;
+        min-height: 252px;
+    }
+    .welcome-img {
+        display: none;
+    }
+
+    .welcome-wrapper {
+        display: inherit;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-headline {
+        font-size: 25px;
+        line-height: 35px;
+        margin-bottom: 20.3px;
+        height: 72px;
+        max-width: 330px;
+    }
+
+    .welcome-text {
+        margin: 0 0 20px 0;
+        max-width: 100%;
+    }
+
+    .welcome-button {
+        padding: 6px 16px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .about-section {
+        min-height: 516px;
+    }
+
+    .about-content {
+        justify-content: flex-start;
+        min-height:min-content;
+    }
+
+    .about-headline {
+        font-size: 25px;
+        line-height: 32.5px;
+        max-width: 288px;
+        max-height: 58px;
+        margin: 30px 0 21.5px;
+    }
+
+    .about-text {
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 330px;
+    }
+
+    .about-img {
+        width: 150px;
+        height: 147px;
+        margin: 0 0 31px;
+    }
+
+    .button-list {
+        flex-wrap: wrap;
+        min-width: 252px;
+        margin-bottom: 31px;
+        justify-content: flex-start;
+    }
+
+    .service-section {
+        min-height: 3150px;
+    }
+
+    .service-content {
+        margin: 30px auto 0;
+    }
+
+    .service-headline {
+        font-size: 25px;
+        line-height: 32px;
+        max-width: 187px;
+        min-height: 69px;
+        margin: 0 0 35px;
+    }
+
+    .service-button {
+        margin: 0 10px 9px 0;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 7px 28px;
+        min-width: 121px;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-content: center;
+        margin-bottom: -7px;
+    }
+
+    .service-item {
+        margin-bottom: 32.5px;
+    }
+
+    .price-section {
+        flex-direction: column;
+        min-height: 512px;
+    }
+
+    .contact-box-img {
+        display: none;
+    }
+
+    .price-headline {
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .prices-box {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rate-description {
+        font-size: 15px;
+        line-height: 20px;
+        margin-left: 30px;
+    }
+
+    .rate-btn {
+        max-width: 180px;
+    }
+
+    .rates-box {
+        margin-top: 36px;
+        padding: 29px 22px;
+        max-width: 224px;
+    }
+
+    .contact-box {
+        margin-top: 19px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-box-headline {
+        font-size: 20px;
+        line-height: 35px;
+        max-width: 230px;
+    }
+
+    .contact-btn {
+        font-size: 15px;
+        line-height: 20px;
+        padding: 8px 22px;
+        min-width: 121px;
+        margin: 18px 0 40px;
+    }
+
+    .rate-btns {
+        height: 177px;
+    }
+
+    .contact-headline {
+        font-size: 25px;
+        line-height: 32.5px;
+    }
+
+    .contact {
+        min-height: 445px;
+    }
+
+    .contacts-wrpapper {
+        min-height: 445px;
+    }
+
+    .contact-content {
+        margin-top: 25px;
+        min-height: 164px;
+    }
+
+    .contacts-img {
+        max-width: 100px;
+        max-height: 124.5px;
+        margin: 0;
+    }
+
+    .contact-form {
+        width: 92%;
+    }
+
+    .select-wrapper::after {
+        right: 24px;
+    }
+    
+    .footer-content {
+        justify-content: flex-start;
+    }
+
+    .rss {
+        margin: 16px 0 6px;
+    }
+
+    .github {
+        margin-top: 18px;
+    }
+
+
 }
